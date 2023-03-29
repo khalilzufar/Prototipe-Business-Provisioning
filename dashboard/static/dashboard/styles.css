@@ -1,0 +1,28 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .th2 {
+    background-color: aquamarine;
+  }
+  th {
+    font-size: 10px;
+    border: 1px solid #b2b2b2;
+    text-align: left;
+    padding: 8px;
+    text-align:center;
+    background-color: red;
+  }
+  td {
+    font-size: 10px;
+    border: 1px solid #b2b2b2;
+    text-align: left;
+    padding: 8px;
+    text-align:center;
+  
+  }
+  
+  tr:nth-child(even) {
+    background-color: #FFFFFF;
+  }
