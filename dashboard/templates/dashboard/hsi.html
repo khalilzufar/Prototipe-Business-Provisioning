@@ -1,0 +1,193 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <span class="navbar-toggler-icon my-toggler" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></span>
+        <a class="navbar-brand" href=# style="color: white">HSI</a></span>
+        <img src="{% static "images/telkom.png" %}" height= 40 width= 40 alt="Telkom">
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">High Speed Internet (HSI)</a>
+          <a class="dropdown-item" href="#">DATIN</a>
+          <a data-target="rekap.html"  target="_blank" href="rekap.html" class="dropdown-item" >REKAP</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </nav>
+    <nav class="navbar2" style="background-color: #B2B2B2;">
+      <span class="datebg" id='date-time'></span>
+      <br><br><br>
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Treg
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">TREG1</a></li>
+          <li><a href="#">TREG2</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">jQuery</a></li>
+          <li><a href="#">Bootstrap</a></li>
+          <li><a href="#">Angular</a></li>
+        </ul>  &nbsp;
+      
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Witel
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Mode
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Unit
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Transaksi
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Play
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Type
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Package
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Payment Type
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Umur
+            </a> &nbsp;
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Channel
+            </a> &nbsp; 
+            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Product
+            </a>
+            <br><br>
+            <input class="btn btn-success btn-sm " type="submit" value="Submit">
+          </div>
+          <br><br>
+    </nav>
+
+    <BR>
+    <table border="2">
+      <tr>
+        <th rowspan="2">STO</th>
+        <th rowspan="2">UNSC</th>
+        <th colspan="7">PROV ISSUE</th>
+        <th colspan="2">A.COMP</th>
+        <th colspan="4">PS</th>
+        <th colspan="6">FALLOUT</th>
+        <th rowspan="2" colspan="3">TOTAL ORDERS</th>
+      </tr>
+      <tr>
+        
+        <td class="th2">PI PAGI</td>
+        <td class="th2">PI SORE</td>
+        <td class="th2">AS-EX</td>
+        <td class="th2">AS-HI</td>
+        <td class="th2">AS-H+</td>
+        <td class="th2">VAL</td>
+        <td class="th2">TOTAL</td>
+       
+        <td class="th2">OK</td>
+        <td class="th2">NOK</td>
+        
+        <td class="th2">HI</td>
+        <td class="th2">EST</td>
+        <td class="th2">DEV</td>
+        <td class="th2">H-1</td>
+      
+        <td class="th2">WFM</td>
+        <td class="th2">UIM</td>
+        <td class="th2">ASP</td>
+        <td class="th2">OSM</td>
+        <td class="th2">OTHERS</td>
+        <td class="th2">TOTAL</td>
+      </tr>
+      <tr>
+        <td>CBB</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CWA</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>GAN</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>JTN</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>KLD</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>KRG</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr><tr>
+        <td>PDK</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>PGB</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>PSR</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RMG</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+      <tr class="total">
+        <td style="color: white">TOTAL</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td>
+      </tr>
+    </table>
+    <br><br>
+    <HR>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      var dt = new Date();
+      document.getElementById('date-time').innerHTML=dt;
+      </script>
+    
+</body>
+</html>
