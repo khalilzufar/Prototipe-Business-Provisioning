@@ -3,179 +3,186 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
   </head>
   <body>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <div class="row"> 
+          <div class="col-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          </div>
+        </div>
+        <div class="container-fluid">
+          <a class="navbar-brand"  style="color: white">HSI</a>
+          <img src="{% static "images/telkom.png" %}" height= 40 width= 40 alt="Telkom">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <span class="navbar-toggler-icon my-toggler" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></span>
-        <a class="navbar-brand" href=# style="color: white">HSI</a></span>
-        <img src="{% static "images/telkom.png" %}" height= 40 width= 40 alt="Telkom">
+      
+    </nav>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">High Speed Internet (HSI)<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="datin/">DATIN<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rekap/">REKAP<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">High Speed Internet (HSI)</a>
-          <a class="dropdown-item" href="#">DATIN</a>
+          <a class="dropdown-item" href="datin/">DATIN</a>
           <a data-target="rekap.html"  target="_blank" href="rekap.html" class="dropdown-item" >REKAP</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Separated link</a>
         </div>
     </nav>
-    <nav class="navbar2" style="background-color: #B2B2B2;">
+    <nav class="navbar navbar-expand-lg navbar2">
       <span class="datebg" id='date-time'></span>
-      <br><br><br>
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Treg
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">TREG1</a></li>
-          <li><a href="#">TREG2</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">jQuery</a></li>
-          <li><a href="#">Bootstrap</a></li>
-          <li><a href="#">Angular</a></li>
-        </ul>  &nbsp;
-      
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Witel
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Mode
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Unit
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Transaksi
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Play
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Type
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Package
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Payment Type
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Umur
-            </a> &nbsp;
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Channel
-            </a> &nbsp; 
-            <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Product
-            </a>
-            <br><br>
-            <input class="btn btn-success btn-sm " type="submit" value="Submit">
-          </div>
+      <span class="label treg">Treg</span>
+      <span class="label witel">Witel</span>
+      <span class="label sto">Mode</span>
+      <br>
+      <div class="row"> 
+        <div class="col-sm-2">
+          <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <input class="btn btn-success btn-sm " type="submit" value="Submit">
           <br><br>
     </nav>
 
     <BR>
-    <table border="2">
-      <tr>
-        <th rowspan="2">STO</th>
-        <th rowspan="2">UNSC</th>
-        <th colspan="7">PROV ISSUE</th>
-        <th colspan="2">A.COMP</th>
-        <th colspan="4">PS</th>
-        <th colspan="6">FALLOUT</th>
-        <th rowspan="2" colspan="3">TOTAL ORDERS</th>
-      </tr>
-      <tr>
-        
-        <td class="th2">PI PAGI</td>
-        <td class="th2">PI SORE</td>
-        <td class="th2">AS-EX</td>
-        <td class="th2">AS-HI</td>
-        <td class="th2">AS-H+</td>
-        <td class="th2">VAL</td>
-        <td class="th2">TOTAL</td>
-       
-        <td class="th2">OK</td>
-        <td class="th2">NOK</td>
-        
-        <td class="th2">HI</td>
-        <td class="th2">EST</td>
-        <td class="th2">DEV</td>
-        <td class="th2">H-1</td>
-      
-        <td class="th2">WFM</td>
-        <td class="th2">UIM</td>
-        <td class="th2">ASP</td>
-        <td class="th2">OSM</td>
-        <td class="th2">OTHERS</td>
-        <td class="th2">TOTAL</td>
-      </tr>
-      <tr>
-        <td>CBB</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CWA</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>GAN</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>JTN</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>KLD</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>KRG</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr><tr>
-        <td>PDK</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>PGB</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>PSR</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>RMG</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-      <tr class="total">
-        <td style="color: white">TOTAL</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td></td>
-      </tr>
-    </table>
+     
+        <div class="table-responsive">
+          <table border = 2>
+            <tr>
+              <th rowspan="2">STO</th>
+              <th rowspan="2">UNSC</th>
+              <th colspan="7">PROV ISSUE</th>
+              <th colspan="2">A.COMP</th>
+              <th colspan="4">PS</th>
+              <th colspan="6">FALLOUT</th>
+              <th rowspan="2" colspan="3">TOTAL ORDERS</th>
+            </tr>
+            <tr>
+              
+              <td class="th2">PI PAGI</td>
+              <td class="th2">PI SORE</td>
+              <td class="th2">AS-EX</td>
+              <td class="th2">AS-HI</td>
+              <td class="th2">AS-H+</td>
+              <td class="th2">VAL</td>
+              <td class="th2">TOTAL</td>
+             
+              <td class="th2">OK</td>
+              <td class="th2">NOK</td>
+              
+              <td class="th2">HI</td>
+              <td class="th2">EST</td>
+              <td class="th2">DEV</td>
+              <td class="th2">H-1</td>
+            
+              <td class="th2">WFM</td>
+              <td class="th2">UIM</td>
+              <td class="th2">ASP</td>
+              <td class="th2">OSM</td>
+              <td class="th2">OTHERS</td>
+              <td class="th2">TOTAL</td>
+            </tr>
+            <tr>
+              <td>CBB</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CWA</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>GAN</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>JTN</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>KLD</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>KRG</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr><tr>
+              <td>PDK</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PGB</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PSR</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>RMG</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+            <tr class="total">
+              <td style="color: white">TOTAL</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+
+    
     <br><br>
     <HR>
 

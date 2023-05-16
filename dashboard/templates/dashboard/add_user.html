@@ -1,0 +1,25 @@
+{% extends 'dashboard/admin.html' %}
+
+{% block content %}
+
+<h1>Add User</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+    <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}

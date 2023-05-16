@@ -1,15 +1,36 @@
+html, body {
+  height: 100%;
+      }
+  h4{
+      font-family: arial, sans-serif;
+      background-color: red;
+  }
+  #green {
+      height: 100%;
+      background: grey;
+      text-align: center;
+      color: black;
+  }
+.navbar-light{
+  padding-left:30px;
+  padding-right:30px; 
+}
 .navbar-brand{
-  padding-left: 20px;
+  padding-left: 15px;
   font-size: 40px;
 }
+
 .navbar2{
 padding-top: 20px;
+background-color: #B2B2B2 !important;
 padding-left: 30px;
 margin-left: 25px;
 margin-right: 25px; 
 margin-top: 25px;
 }
-
+.navbar3{
+  background-color: #B2B2B2;
+}
 .datebg{
   float: right;
   background-color: aquamarine;}
@@ -61,3 +82,21 @@ table {
     padding-left: 20px;
     padding-bottom: 10px;
   }
+
+.label {
+    color: black;
+    font-family: Arial;
+    font-size:15px;
+}
+.witel {margin-left: 45px;}
+.sto {margin-left: 40px;}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
