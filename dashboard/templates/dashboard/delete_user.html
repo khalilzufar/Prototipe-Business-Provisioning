@@ -4,11 +4,11 @@
 
 <h1>Delete User</h1>
 
-<p>Are you sure you want to delete user "{{ user.name }}"?</p>
+<p>Are you sure you want to delete user, {{user.name }}?</p>
 
 <form method="post" class="d-inline">
     {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Delete</a>
     <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Cancel</a>
 </form>
 

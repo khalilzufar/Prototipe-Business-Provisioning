@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from .forms import UserForm
 from .models import Myuser
-
 # Create your views here.
+
+
 def datin(request):    
     return render(request, 'dashboard/datin.html')
 
@@ -12,10 +14,11 @@ def rekap(request):
     return render(request, 'dashboard/rekap.html')
 
 
-def admin(request):    
+def admin(request):  
     return render(request, 'dashboard/admin.html')
 
-
+def test(request):  
+    return render(request, 'dashboard/test.html')
 
 
 
@@ -26,10 +29,9 @@ def adashboard(request):
 
 def add_user(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        age = request.POST.get('age')
-        Myuser.objects.create(name=name, email=email, age=age)
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
         return redirect('adashboard')
     return render(request, 'dashboard/add_user.html')
 
@@ -38,7 +40,7 @@ def edit_user(request, id):
     if request.method == 'POST':
         user.name = request.POST.get('name')
         user.email = request.POST.get('email')
-        user.age = request.POST.get('age')
+        user.nohp = request.POST.get('nohp')
         user.save()
         return redirect('adashboard')
     context = {'user': user}

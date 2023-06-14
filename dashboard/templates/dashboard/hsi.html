@@ -7,73 +7,72 @@
     <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-dark">
-      <div class="container">
-        <div class="row"> 
-          <div class="col-sm">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            
-          </div>
-        </div>
-        <div class="container-fluid">
-          <a class="navbar-brand"  style="color: white">HSI</a>
-          <img src="{% static "images/telkom.png" %}" height= 40 width= 40 alt="Telkom">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <span class="navbar-toggler-icon my-toggler" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></span>
+      <a class="navbar-brand" href=# style="color: white">HSI</a></span>
+      <img src="{% static "images/telkom.png" %}" height= 40 width= 40 alt="Telkom">
 
-      
-    </nav>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">High Speed Internet (HSI)<span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="datin/">DATIN<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="rekap/">REKAP<span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/dashboard">High Speed Internet (HSI)</a>
+        <a class="dropdown-item" href="#">DATIN</a>
+        <a class="dropdown-item" href="/dashboard/rekap/">REKAP</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/dashboard/admin">ADMIN</a>
       </div>
-    </div>
-  
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">High Speed Internet (HSI)</a>
-          <a class="dropdown-item" href="datin/">DATIN</a>
-          <a data-target="rekap.html"  target="_blank" href="rekap.html" class="dropdown-item" >REKAP</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar2">
-      <span class="datebg" id='date-time'></span>
-      <span class="label treg">Treg</span>
-      <span class="label witel">Witel</span>
-      <span class="label sto">Mode</span>
-      <br>
-      <div class="row"> 
-        <div class="col-sm-2">
-          <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="col-sm-2">
-          <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-      </div>
-      <input class="btn btn-success btn-sm " type="submit" value="Submit">
+  </nav>
+  <nav class="navbar2" style="background-color: #B2B2B2;">
+    <span class="datebg" id='date-time'></span>
+    <br><br><br>
+      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Treg
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">TREG1</a></li>
+        <li><a href="#">TREG2</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">jQuery</a></li>
+        <li><a href="#">Bootstrap</a></li>
+        <li><a href="#">Angular</a></li>
+      </ul>  &nbsp;
+    
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Witel
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Mode
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Unit
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Transaksi
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Play
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Type
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Package
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Payment Type
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Umur
+          </a> &nbsp;
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Channel
+          </a> &nbsp; 
+          <a class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Product
+          </a>
           <br><br>
-    </nav>
+          <input class="btn btn-success btn-sm " type="submit" value="Submit">
+        </div>
+        <br><br>
+  </nav>
 
     <BR>
      

@@ -22,5 +22,4 @@ from dashboard import views
 urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('admin/', admin.site.urls),
-    path('polls/', include('polls.urls')),
 ]

@@ -18,8 +18,8 @@
         <label for="age">Age</label>
         <input type="number" name="age" id="age" class="form-control" value="{{ user.age }}">
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Save</a>
     <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Cancel</a>
 </form>
-
+    
 {% endblock %}

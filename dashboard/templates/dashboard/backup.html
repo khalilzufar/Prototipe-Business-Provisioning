@@ -1,0 +1,279 @@
+class Myuser(models.Model):
+    no_cust = models.CharField(max_length=100)
+    ao = models.CharField(max_length=50)
+    witel = models.CharField(max_length=50)
+    ncli = models.CharField(max_length=50)
+    wfm_id = models.CharField(max_length=50)
+    layanan = models.CharField(max_length=50)
+    flag_deposit = models.CharField(max_length=50)
+    paket = models.CharField(max_length=50)
+    product = models.CharField(max_length=50)
+    email = models.EmailField()
+    name = models.CharField(max_length=50)
+    cat_provider = models.CharField(max_length=50)
+    cust_addr = models.CharField(max_length=50)
+    cust_addr_new = models.CharField(max_length=50)
+    k_contact = models.CharField(max_length=50)
+    od = models.CharField(max_length=50)
+    durasi = models.CharField(max_length=50)
+    tahapan_instalasi = models.CharField(max_length=50)
+    task = models.CharField(max_length=50)
+    act_start = models.DateField(default=timezone.now)
+    schedule_labor = models.CharField(max_length=50)
+    lok_odp_pelanggan = models.CharField(max_length=50)
+    lat = models.CharField(max_length=50)
+    lon = models.CharField(max_length=50)
+    amcrew = models.CharField(max_length=120)
+    teknisi = models.CharField(max_length=50)
+    tgl_install = models.DateField()
+    status = models.CharField(max_length=50)
+    tgl_status = models.DateField()
+    durasi_jam = models.CharField(max_length=50)
+    status_message = models.CharField(max_length=50)
+    inet_onu = models.CharField(max_length=50)
+    rx_level = models.CharField(max_length=50)
+    usg_inet = models.CharField(max_length=50)
+    usg_iptv = models.CharField(max_length=50)
+    status_voice = models.CharField(max_length=50)
+    clid = models.CharField(max_length=50)
+    last_sess_inet = models.CharField(max_length=50)
+    tgl_ukur = models.DateField()
+    appointment = models.CharField(max_length=50)
+    error_code = models.CharField(max_length=50)
+    engineer_mode = models.CharField(max_length=50)
+    kendala = models.CharField(max_length=50)
+    sub_kendala = models.CharField(max_length=50)
+    description = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+
+        class UserForm(forms.ModelForm):
+    class Meta:
+        model = Myuser
+        fields = ['no_cust', 'ao', 'witel', 'ncli', 'wfm_id', 'layanan', 'flag_deposit', 'paket', 'product',
+                  'email', 'name', 'cat_provider', 'cust_addr', 'cust_addr_new', 'k_contact', 'od', 'durasi',
+                  'tahapan_instalasi', 'task', 'act_start', 'schedule_labor', 'lok_odp_pelanggan', 'lat', 'lon',
+                  'amcrew', 'teknisi', 'tgl_install', 'status', 'tgl_status', 'durasi_jam', 'status_message',
+                  'inet_onu', 'rx_level', 'usg_inet', 'usg_iptv', 'status_voice', 'clid', 'last_sess_inet',
+                  'tgl_ukur', 'appointment', 'error_code', 'engineer_mode', 'kendala', 'sub_kendala', 'description']
+        
+        widgets = no_cust = forms.CharField(label='No Cust', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        ao = forms.CharField(label='AO', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        witel = forms.CharField(label='WITEL', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        ncli = forms.CharField(label='NCLI', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        wfm_id = forms.CharField(label='WFM ID', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        layanan = forms.CharField(label='Layanan', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        flag_deposit = forms.CharField(label='FLAG DEPOSIT', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        paket = forms.CharField(label='PAKET', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        product = forms.CharField(label='Product', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'class': 'form-control'})),
+        name = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        cat_provider = forms.CharField(label='CAT/PROVIDER', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        cust_addr = forms.CharField(label='CUST ADDR', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        cust_addr_new = forms.CharField(label='CUST ADDR NEW', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        k_contact = forms.CharField(label='K-CONTACT', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        od = forms.CharField(label='OD', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        durasi = forms.CharField(label='DURASI', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        tahapan_instalasi = forms.CharField(label='TAHAPAN INSTALASI', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        task = forms.CharField(label='Task', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        act_start = forms.CharField(label='Act Start', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        schedule_labor = forms.CharField(label='Schedule Labor', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        lok_odp_pelanggan = forms.CharField(label='Lok ODP & Pelanggan', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        lat = forms.CharField(label='Lat', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        lon = forms.CharField(label='Lon', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        amcrew = forms.CharField(label='AMCREW', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        teknisi = forms.CharField(label='TEKNISI', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        tgl_install = forms.DateField(label='TGL INSTALL', widget=forms.DateInput(attrs={'class': 'form-control'})),
+        status = forms.CharField(label='STATUS', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        tgl_status = forms.DateField(label='TGL STATUS', widget=forms.DateInput(attrs={'class': 'form-control'})),
+        durasi_jam = forms.CharField(label='Durasi (jam)', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        status_message = forms.CharField(label='STATUS MESSAGE', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        inet_onu = forms.CharField(label='INET: ONU', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        rx_level = forms.CharField(label='RX LEVEL', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        usg_inet = forms.CharField(label='USG INET', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        usg_iptv = forms.CharField(label='USG IPTV', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        status_voice = forms.CharField(label='STATUS VOICE', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        clid = forms.CharField(label='CLID', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        last_sess_inet = forms.CharField(label='LAST SESS. INET', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        tgl_ukur = forms.DateField(label='TGL UKUR', widget=forms.DateInput(attrs={'class': 'form-control'})),
+        appointment = forms.CharField(label='Appointment', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        error_code = forms.CharField(label='Error code', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        engineer_mode = forms.CharField(label='Engineer mode', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        kendala = forms.CharField(label='Kendala', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        sub_kendala = forms.CharField(label='Sub Kendala', widget=forms.TextInput(attrs={'class': 'form-control'})),
+        description = forms.CharField(label='Description', widget=forms.TextInput(attrs={'class': 'form-control'})),
+
+
+
+
+
+
+        class Myuser(models.Model):
+    name = models.CharField(max_length=50)
+    nohp = models.CharField(max_length=15, default='')
+    no_order = models.CharField(max_length=100, default='')
+    ao = models.CharField(max_length=50, default='')
+    witel = models.CharField(max_length=50, default='')
+    ncli = models.CharField(max_length=50, default='')
+    wfm_id = models.CharField(max_length=50, default='')
+    layanan = models.CharField(max_length=50, default='')
+    flag_deposit = models.CharField(max_length=50, default='')
+    paket = models.CharField(max_length=50, default='')
+    product = models.CharField(max_length=50, default='')
+    cat_provider = models.CharField(max_length=50, default='')
+    cust_addr = models.CharField(max_length=50, default='')
+    cust_addr_new = models.CharField(max_length=50, default='')
+    k_contact = models.CharField(max_length=50, default='')
+    od = models.CharField(max_length=50, default='')
+    durasi = models.CharField(max_length=50, default='')
+    tahapan_instalasi = models.CharField(max_length=50, default='')
+    task = models.CharField(max_length=50, default='')
+    act_start = models.DateField(default=timezone.now)
+    schedule_labor = models.CharField(max_length=50, default='')
+    lok_odp_pelanggan = models.CharField(max_length=50, default='')
+    lat = models.CharField(max_length=50, default='')
+    lon = models.CharField(max_length=50, default='')
+    amcrew = models.CharField(max_length=120, default='')
+    teknisi = models.CharField(max_length=50, default='')
+    tgl_install = models.DateField(null=True)
+    status = models.CharField(max_length=50, default='')
+    tgl_status = models.DateField(null=True)
+    durasi_jam = models.CharField(max_length=50, default='')
+    status_message = models.CharField(max_length=50, default='')
+    inet_onu = models.CharField(max_length=50, default='')
+    rx_level = models.CharField(max_length=50, default='')
+    usg_inet = models.CharField(max_length=50, default='')
+    usg_iptv = models.CharField(max_length=50, default='')
+    status_voice = models.CharField(max_length=50, default='')
+    clid = models.CharField(max_length=50, default='')
+    last_sess_inet = models.CharField(max_length=50, default='')
+    tgl_ukur = models.DateField(null=True)
+    appointment = models.CharField(max_length=50, default='')
+    error_code = models.CharField(max_length=50, default='')
+    engineer_mode = models.CharField(max_length=50, default='')
+    kendala = models.CharField(max_length=50, default='')
+    sub_kendala = models.CharField(max_length=50, default='')
+    description = models.CharField(max_length=50, default='')
+
+    def __str__(self):
+        return self.name
+
+        from django.shortcuts import render, redirect, get_object_or_404
+
+        def adashboard(request):
+    users = Myuser.objects.all()
+    context = {'users': users}
+    return render(request, 'dashboard/adashboard.html', context)
+
+    def add_user(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('adashboard')
+    return render(request, 'dashboard/add_user.html')
+
+def edit_user(request, id):
+    user = Myuser.objects.get(id=id)
+    if request.method == 'POST':
+        user.name = request.POST.get('name')
+        user.email = request.POST.get('email')
+        user.nohp = request.POST.get('nohp')
+        user.save()
+        return redirect('adashboard')
+    context = {'user': user}
+    return render(request, 'dashboard/edit_user.html', context)
+
+def delete_user(request, id):
+    user = get_object_or_404(Myuser, id=id)
+    user.delete()
+    return redirect('adashboard')
+
+
+
+    path('add_user/', views.add_user, name='add_user'),
+    path('edit_user/<int:id>/', views.edit_user, name='edit_user'),
+    path('delete_user/<int:id>/', views.delete_user, name='delete_user'),
+]
+
+
+
+
+
+
+<table id="example" class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>NO</th>
+            <th>ORDER / WITEL / DATEK / <br> NDEM POST / NDEM HSI</th>
+            <th>CUSTOMER NAME / ADDRESS / <BR>TGL ORDER (OD) /PS / DURASI  </th>
+            <th>STATUS</th>
+            <th>HASIL UKUR</th>
+            <th>KENDALA</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{user.no_order}}<br>
+                {{user.witel}}<br>
+                {{user.datek}}<br>
+                NCLI:{{user.ncli}}<br>
+                WFM ID:{{user.wfm_id}}<br>
+                LAYANAN:{{user.layanan}}<br>
+                FLAG DEPOSIT:{{user.flag_deposit}}<br>
+                PAKET:{{user.paket}}<br>
+                PRODUCT:{{user.product}}</td>
+            <td>{{user.name}} ({{user.nohp}})<br>
+                CAT/PROVIDER:{{user.cat_provider}}<br>
+                CUST ADDR:{{user.cust_addr}}<br>
+                CUST ADDR NEW:{{user.cust_addr_new}}<br>
+                K-CONTACT:{{user.k_contact}}<br>
+                OD:{{user.od}}<br>
+                DURASI:{{user.durasi}}<br>
+                TAHAPAN INSTALASI:{{user.tahapan_instalasi}}<br>
+                TASK:{{user.task}}<br>
+                ACT START:{{user.act_start}}<br>
+                SCHEDULE LABOR:{{user.schedule_labor}}<br>
+                LOK ODP & PELANGGAN<br>
+                LAT:{{user.lat}}, LON:{{user.lon}}</td>
+            <td>AM CREW:{{user.amcrew}}<br>
+                TEKNISI:{{user.teknisi}}<br>
+                TGL INSTALL:{{user.tgl_install}}<br>
+                STATUS:{{user.status}}<br>
+                STATUS MESSAGE:{{user.status_message}}</td>
+            <td>INET:{{user.inet}} ONU:{{user.onu}}<br>
+                RX LEVEL:{{user.rx_level}}<br>
+                USG INET:{{user.usg_inet}}<br>
+                USG IPTV:{{user.usg_iptv}}<br>
+                STATUS VOICE:{{user.status_voice}}<br>
+                CLID:{{user.clid}}<br>
+                LAST SESS.INET:{{user.last_sess_inet}}<br>
+                TGL UKUR:{{user.tgl_ukur}}</td>
+            <td>APPOINTMENT:{{user.appointment}}<br>
+                ERROR CODE:{{user.error_code}}<br>
+                ENGINEER MEMO:{{user.engineer_memo}}<br>
+                KENDALA:{{user.kendala}}<br>
+                SUB KENDALA:{{user.sub_kendala}}<br>
+                DECSRIPTION:{{user.description}}</td>
+            <td>
+                <a href="{% url 'dashboard:edit_user' user.id %}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="{% url 'dashboard:delete_user' user.id %}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                </td>
+        </tr>
+        {%empty%}
+        <tr>
+            <td colspan="6">No users found.</td>
+        </tr>
+        {% endfor %}
+    </tfoot>
+</table>

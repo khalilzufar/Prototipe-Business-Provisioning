@@ -4,19 +4,185 @@
 
 <h1>Add User</h1>
 
-<form method="POST">
+<form action="{% url 'dashboard:adashboard' %}" method="post">
     {% csrf_token %}
+    <div class="form-row">
+        <div class="col-7">
+            <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{ user.name }}" autocomplete="name">
+    </div>
+    <div class="col">
+        <label for="nohp">No. HP</label>
+        <input type="nohp" name="nohp" id="nohp" class="form-control" value="{{ user.nohp }}">
+    </div>
+    </div>
+    <div class="form-group ">
+        <label for="witel">Witel</label>
+        <select id="witel" name="witel" id="witel" class="form-control" value="{{ user.witel}}">
+          <option selected>Choose...</option>
+          <option value="1">REG 2 / JAKTIM / CWA</option>
+          <option value="2">REG 2 / JAKTIM / CBB</option>
+          <option value="3">REG 2 / JAKTIM / GAN</option>
+          <option value="4">REG 2 / JAKTIM / JTN</option>
+          <option value="5">REG 2 / JAKTIM / KLD</option>
+          <option value="6">REG 2 / JAKTIM / KRG</option>
+        </select>
+      </div>
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" class="form-control">
+        <label for="ncli">NCLI</label>
+        <input type="ncli" name="ncli" id="ncli" class="form-control" value="{{ user.ncli }}">
     </div>
     <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control">
+        <label for="wfm_id">WFM ID</label>
+        <input type="wfm_id" name="wfm_id" id="wfm_id" class="form-control" value="{{ user.wfm_id }}">
     </div>
     <div class="form-group">
-        <label for="age">Age</label>
-        <input type="number" name="age" id="age" class="form-control">
+        <label for="layanan">Layanan</label>
+        <input type="layanan" name="layanan" id="layanan" class="form-control" value="{{ user.layanan }}">
+    </div>
+    <div class="form-group">
+        <label for="flag_deposit">Flag Deposit</label>
+        <input type="flag_deposit" name="flag_deposit" id="flag_deposit" class="form-control" value="{{ user.flag_deposit }}">
+    </div>
+    <div class="form-group">
+        <label for="paket">Paket</label>
+        <input type="paket" name="paket" id="paket" class="form-control" value="{{ user.paket }}">
+    </div>
+    <div class="form-group">
+        <label for="product">Product</label>
+        <input type="product" name="product" id="product" class="form-control" value="{{ user.product }}">
+    </div>
+    <div class="form-group">
+        <label for="cat_provider">CAT/PROVIDER</label>
+        <input type="cat_provider" name="cat_provider" id="cat_provider" class="form-control" value="{{ user.no_order }}">
+    </div>
+    <div class="form-group">
+        <label for="cust_addr">Cust Address</label>
+        <input type="cust_addr" name="cust_addr" id="cust_addr" class="form-control" value="{{ user.cust_addr }}">
+    </div>
+    <div class="form-group">
+        <label for="cust_addr_new">Cust Address New</label>
+        <input type="cust_addr_new" name="cust_addr_new" id="cust_addr_new" class="form-control" value="{{ user.cust_addr_new }}">
+    </div>
+    <div class="form-group">
+        <label for="k_contact">K-Contact</label>
+        <input type="k_contact" name="k_contact" id="k_contact" class="form-control" value="{{ user.k_contact }}">
+    </div>
+    <div class="form-group">
+        <label for="od">OD</label>
+        <input type="od" name="od" id="od" class="form-control" value="{{ user.od }}">
+    </div>
+    <div class="form-group">
+        <label for="durasi">Durasi</label>
+        <input type="durasi" name="durasi" id="durasi" class="form-control" value="{{ user.durasi }}">
+    </div>
+    <div class="form-group">
+        <label for="tahapan_instalasi">Tahapan Instalasi</label>
+        <input type="tahapan_instalasi" name="tahapan_instalasi" id="tahapan_instalasi" class="form-control" value="{{ user.tahapan_instalasi }}">
+    </div>
+    <div class="form-group">
+        <label for="task">Task</label>
+        <input type="task" name="task" id="task" class="form-control" value="{{ user.task }}">
+    </div>
+    <div class="form-group">
+        <label for="act_start">Act Start</label>
+        <input type="act_start" name="act_start" id="act_start" class="form-control" value="{{ user.act_start }}">
+    </div>
+    <div class="form-group">
+        <label for="schedule_labor">Schedule Labor</label>
+        <input type="schedule_labor" name="schedule_labor" id="schedule_labor" class="form-control" value="{{ user.schedule_labor }}">
+    </div>
+    <div class="form-group">
+        <label for="lat">Lat</label>
+        <input type="lat" name="lat" id="lat" class="form-control" value="{{ user.lat }}">
+    </div>
+    <div class="form-group">
+        <label for="lon">lon</label>
+        <input type="lon" name="lon" id="lon" class="form-control" value="{{ user.lon }}">
+    </div>
+    <div class="form-group">
+        <label for="amcrew">Amcrew</label>
+        <input type="amcrew" name="amcrew" id="amcrew" class="form-control" value="{{ user.amcrew }}">
+    </div>
+    <div class="form-group">
+        <label for="teknisi">Teknisi</label>
+        <input type="teknisi" name="teknisi" id="teknisi" class="form-control" value="{{ user.teknisi }}">
+    </div>
+    <div class="form-group">
+        <label for="tgl_install">Tanggal Install</label>
+        <input type="tgl_install" name="tgl_install" id="tgl_install" class="form-control" value="{{ user.tgl_install }}">
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="status" name="status" id="status" class="form-control" value="{{ user.status }}">
+    </div>
+    <div class="form-group">
+        <label for="tgl_status">Tanggal Status</label>
+        <input type="tgl_status" name="tgl_status" id="tgl_status" class="form-control" value="{{ user.tgl_status }}">
+    </div>
+    <div class="form-group">
+        <label for="durasi_jam">Durasi Jam</label>
+        <input type="durasi_jam" name="durasi_jam" id="durasi_jam" class="form-control" value="{{ user.durasi_jam }}">
+    </div>
+    <div class="form-group">
+        <label for="status_message">Status Message</label>
+        <input type="status_message" name="status_message" id="status_message" class="form-control" value="{{ user.status_message }}">
+    </div>
+    <div class="form-group">
+        <label for="inet_onu">Inet Onu</label>
+        <input type="inet_onu" name="inet_onu" id="inet_onu" class="form-control" value="{{ user.inet_onu }}">
+    </div>
+    <div class="form-group">
+        <label for="rx_level">RX Level</label>
+        <input type="rx_level" name="rx_level" id="rx_level" class="form-control" value="{{ user.rx_level }}">
+    </div>
+    <div class="form-group">
+        <label for="usg_inet">USG Inet</label>
+        <input type="usg_inet" name="usg_inet" id="usg_inet" class="form-control" value="{{ user.usg_inet }}">
+    </div>
+    <div class="form-group">
+        <label for="usg_iptv">USG Iptv</label>
+        <input type="usg_iptv" name="usg_iptv" id="usg_iptv" class="form-control" value="{{ user.usg_iptv }}">
+    </div>
+    <div class="form-group">
+        <label for="status_voice">Status Voice</label>
+        <input type="status_voice" name="status_voice" id="status_voice" class="form-control" value="{{ user.status_voice }}">
+    </div>
+    <div class="form-group">
+        <label for="clid">Clid</label>
+        <input type="clid" name="clid" id="clid" class="form-control" value="{{ user.clid }}">
+    </div>
+    <div class="form-group">
+        <label for="last_sees_inet">Last Sees Inet</label>
+        <input type="last_sees_inet" name="last_sees_inet" id="last_sees_inet" class="form-control" value="{{ user.last_sees_inet }}">
+    </div>
+    <div class="form-group">
+        <label for="tgl_ukur">Tanggal Ukur</label>
+        <input type="tgl_ukur" name="tgl_ukur" id="tgl_ukur" class="form-control" value="{{ user.tgl_ukur }}">
+    </div>
+    <div class="form-group">
+        <label for="appointment">Appointment</label>
+        <input type="appointment" name="appointment" id="appointment" class="form-control" value="{{ user.appointment }}">
+    </div>
+    <div class="form-group">
+        <label for="error_code">Error Code</label>
+        <input type="error_code" name="error_code" id="error_code" class="form-control" value="{{ user.error_code }}">
+    </div>
+    <div class="form-group">
+        <label for="engineer_mode">Engineer Mode</label>
+        <input type="engineer_mode" name="engineer_mode" id="engineer_mode" class="form-control" value="{{ user.engineer_mode }}">
+    </div>
+    <div class="form-group">
+        <label for="kendala">Kendala</label>
+        <input type="kendala" name="kendala" id="kendala" class="form-control" value="{{ user.kendala }}">
+    </div>
+    <div class="form-group">
+        <label for="sub_kendala">Sub Kendala</label>
+        <input type="sub_kendala" name="sub_kendala" id="sub_kendala" class="form-control" value="{{ user.sub_kendala }}">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="description" name="description" id="description" class="form-control" value="{{ user.description }}">
     </div>
     <button type="submit" class="btn btn-primary">Add User</button>
     <a href="{% url 'dashboard:adashboard' %}" class="btn btn-secondary">Cancel</a>
