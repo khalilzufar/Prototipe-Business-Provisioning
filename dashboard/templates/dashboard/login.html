@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
+    </head>
+    <body>
+        <div class="box">
+            <div class="container">
+                <div class="top">
+                    <span style="color: #F9F5F6;">Have an account?</span>
+                    <br>
+                    <span style="color: #F9F5F6;">Login</span>
+                    <br> <br>
+                </div>
+                <form action ="/dashboard/datin" method="POST">
+                     
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Username" id="">
+                    <i class='bx bx-user' ></i>
+                    <br> <br>
+                </div>
+                <div class="input-field">
+                    <input type="Password" class="input" placeholder="Password" id="">
+                    <i class='bx bx-lock-alt'></i>
+                    <br> <br>
+                </div>
+                <a data-target="admin/"  target="_blank" href="/dashboard/admin/" class="dropdown-item" style="background-color:LightGray;">Login</a>
+                
+                <div class="two-col">
+                    <div class="one">
+                       <input type="checkbox" name="" id="check">
+                       <label for="check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Forgot password?</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </form>
+        <style>
+            *{
+                font-family: 'poppins' ,sans-serif;
+            }
+            .modal {
+                display: none; /* Hide the modal by default */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /* Add other styling properties as needed */
+              }
+            body{
+                background-image: url("images/1.jpg");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-color: #27374D;
+                
+            }
+            .box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 90vh;
+            }
+            .container{
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                padding: 0 15px 0 15px;
+                
+            }
+            .span{
+                color: #fff;
+                font-size: small;
+                display: flex;
+                justify-content: center;
+                padding: 10px 0 10px 0;
+            }
+            .header{
+                color: #fff;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                padding: 10px 0 10px 0;
+                
+            }
+            
+            .input-field .input{
+                height: 45px;
+                width: 87%;
+                border: none;
+                border-radius: 30px;
+                color: #fff;
+                font-size: 15px;
+                padding: 0 0 0 45px;
+                background: rgba(255,255,255,0.1);
+                outline: none;
+            }
+            .i{
+                position: relative;
+                top: -33px;
+                left: 17px;
+                color: #fff;
+            }
+            ::-webkit-input-placeholder{
+                color: #fff;
+            }
+            .submit{
+                border: none;
+                border-radius: 30px;
+                font-size: 15px;
+                height: 45px;
+                outline: none;
+                width: 100%;
+                color: black;
+                background: rgba(255,255,255,0.7);
+                cursor: pointer;
+                transition: .3s ;
+            }
+            .submit:hover{
+                box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+            }
+            .two-col{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: #fff;
+                font-size: small;
+                margin-top: 10px;
+            }
+            .one{
+                display: flex;
+            }
+            .label a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .top {
+                font color="#27374D";
+            }
+        </style>
+       
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+</body>
+</html>
